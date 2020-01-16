@@ -2,6 +2,8 @@
 For Supercollider code 
 
 ===================================
-            THIS PLAY LIST
-https://www.youtube.com/playlist?list=
+           SUPERCOLLIDER 
 ===================================
+
+playlist
+https://www.youtube.com/playlist?list=PLPYzvS8A_rTaNDweXe6PX4CXSGq4iEWYC
