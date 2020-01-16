@@ -1,5 +1,5 @@
 # MusicEng-SC
-For Supercollider code 
+Supercollider code 
 
 = =============================== =
            SUPERCOLLIDER 
