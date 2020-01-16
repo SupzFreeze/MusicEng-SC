@@ -51,15 +51,19 @@ Env.new([0, 1, 0.2, 0.01], [0.5, 1, 2], [3, -3, 0]).plot; // postive slowly firs
 
 (
 x = {
+    //arg t_gate = 0;
+    arg t_gate = 0;
     var sig, env;
     env = EnvGen.kr(Env.new(
     [0, 1, 0.2, 0.01], 
     [0.5, 1, 2], 
     [3, -3, 0])
     doneAction:2);
-    sig = Pluse.ar(ExpRand(30,500)) * env;
+    sig = Pluse.ar(LFPulse.kr(8).range(600,900)) *env;
 }.play;
 )
-
+// to turn on the sound; 
+//x.ser(\gate,1);
+x.ser(\t_gate,1);      
 
 
