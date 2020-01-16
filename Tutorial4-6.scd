@@ -63,7 +63,7 @@ x = {
 }.play;
 )
 // to turn on the sound; 
-//x.ser(\gate,1);
-x.ser(\t_gate,1);      
+//x.set(\gate,1);
+x.set(\t_gate,1);      
 
 
