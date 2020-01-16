@@ -5,6 +5,7 @@ SuperCollider Tutorial4-6 Basic
 // shift + return = run single line
 // cmd + return = run in ( ... )
 
+//Envelopes and doneAction------------------------------
 (
 x = {
   var sig, freq, env;
@@ -31,3 +32,34 @@ Env.new.plot; // draw plot
     sig = Pluse.ar(ExpRand(30,500)) * env;
 }.play;
 )
+
+Env.new([0, 1, 0.2, 0.01], [0.5, 1, 2], \exp).plot;
+Env.new([0, 1, 0.2, 0.01], [0.5, 1, 2], [3, -3, 0]).plot; // postive slowly first and then quickly neg in the other hand
+
+// apply the Env.new to the function
+(
+{
+    var sig, env;
+    env = EnvGen.kr(Env.new(
+    [0, 1, 0.2, 0.01], 
+    [0.5, 1, 2], 
+    [3, -3, 0])
+    doneAction:2);
+    sig = Pluse.ar(ExpRand(30,500)) * env;
+}.play;
+)
+
+(
+x = {
+    var sig, env;
+    env = EnvGen.kr(Env.new(
+    [0, 1, 0.2, 0.01], 
+    [0.5, 1, 2], 
+    [3, -3, 0])
+    doneAction:2);
+    sig = Pluse.ar(ExpRand(30,500)) * env;
+}.play;
+)
+
+
+
